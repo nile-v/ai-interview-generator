@@ -73,42 +73,126 @@ pip install streamlit google-genai
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![<img width="863" height="399" alt="1" src="https://github.com/user-attachments/assets/dec805f9-eab0-402e-bd69-bca060c41791" />
+](Add screenshot 1 here with proper name)
+user enter the details
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![<img width="722" height="412" alt="2" src="https://github.com/user-attachments/assets/43c9dadc-c5c0-4929-9134-733b5fa30bc3" />
+](Add screenshot 2 here with proper name)
+it gives us the question
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![<img width="560" height="367" alt="3" src="https://github.com/user-attachments/assets/60269cdb-5cb9-4c15-a64c-55026bd45746" />
+<img width="742" height="385" alt="4" src="https://github.com/user-attachments/assets/49d085a4-f79b-48dc-a42c-840a3e54a26b" />
+](Add screenshot 3 here with proper name)
+it shows how ai analysed tha answers and give the probability of passing
 
 #### Diagrams
 
 **System Architecture:**
 
 ![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+Flow Summary:<img width="1536" height="1024" alt="ad" src="https://github.com/user-attachments/assets/9ae954f9-1b3a-4983-a729-5519ac80bde0" />
+
+
+Step 1: Input & Question Generation
+
+User provides role, topic, experience.
+
+st.session_state initialized.
+
+Streamlit sends a prompt to Gemini API → gets generated questions → stores in session_state.questions.
+
+Step 2: User Answers
+
+Questions displayed via Streamlit text_area.
+
+User answers stored in st.session_state.user_answers.
+
+Step 3: AI Evaluation
+
+Streamlit constructs evaluation prompt with questions + user answers.
+
+Gemini API returns JSON with score & feedback → stored in session_state.evaluation.
+
+UI displays results & overall pass probability.
+
+State Management
+
+st.session_state ensures continuity across steps.
+
+Restart button resets the session for a fresh interview.
+
+
 
 **Application Workflow:**
 
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+![Workflow](docs/<img width="1024" height="1536" alt="aw" src="https://github.com/user-attachments/assets/7ebc7a25-8a55-45b4-9d31-01fbdbd5f89c" />
+workflow.png)
+User Launches App
+
+Streamlit UI loads.
+
+Session state is initialized (step=1, empty questions/answers/evaluation).
+
+Step 1: User Inputs
+
+User enters: Job Role, Company, Topic, Experience, and Number of Questions.
+
+Clicks “Generate Questions” → sends prompt to Gemini API.
+
+AI Generates Questions
+
+Gemini API returns numbered questions.
+
+Questions stored in st.session_state.questions.
+
+Session step updated to 2 (step=2).
+
+Step 2: Answer Questions
+
+UI displays questions with text areas.
+
+User types answers → stored in st.session_state.user_answers.
+
+Clicks “Submit Answers” → step updated to 3 (step=3).
+
+Step 3: AI Evaluation
+
+Streamlit constructs evaluation prompt including questions + answers.
+
+Gemini API returns JSON evaluation with:
+
+Score per question (0–100)
+
+Detailed feedback
+
+Stored in st.session_state.evaluation.
+
+Display Results
+
+UI shows:
+
+Individual scores and feedback
+
+Overall pass probability
+
+User can click “Restart Interview” → resets session state (step=1) to start over.
+
+Session State Management
+
+Maintains continuity across steps.
+
+Ensures user can navigate back/forward without losing data.
 
 ---
 
 
 #### Build Photos
 
-![Team](Add photo of your team here)
+![Team](Add photo of your team here)<img width="157" height="143" alt="nile" src="https://github.com/user-attachments/assets/5620fc77-2900-425a-a4fa-4aa2fc2525cc" />
 
-![Components](Add photo of your components here)
-*List out all components shown*
 
-![Build](Add photos of build process here)
-*Explain the build steps*
 
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ---
 
@@ -196,52 +280,8 @@ xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
 
 ---
 
-### For Hardware Projects:
 
-#### Bill of Materials (BOM)
 
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
-
-**Total Estimated Cost:** ₹[Amount]
-
-#### Assembly Instructions
-
-**Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
-![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
-
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
-![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
-
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
-![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
-
-**Step 4: [Continue for all steps...]**
-
-**Final Assembly:**
-![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
-
----
 
 ### For Scripts/CLI Tools:
 
