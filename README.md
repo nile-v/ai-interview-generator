@@ -60,11 +60,11 @@ List the key features of your project:
 
 # Install dependencies
 pip install streamlit google-genai
-
+```
 #### Run
 ```bash
    streamlit run app.py
-
+```
 
 
 ## Project Documentation
@@ -73,17 +73,17 @@ pip install streamlit google-genai
 
 #### Screenshots (Add at least 3)
 
-![<img width="863" height="399" alt="1" src="https://github.com/user-attachments/assets/dec805f9-eab0-402e-bd69-bca060c41791" />
+ <img src="./1.png" alt="Project Banner" width="100%">
 ](Add screenshot 1 here with proper name)
 user enter the details
 
-![<img width="722" height="412" alt="2" src="https://github.com/user-attachments/assets/43c9dadc-c5c0-4929-9134-733b5fa30bc3" />
-](Add screenshot 2 here with proper name)
+ <img src="./2.png" alt="Project Banner" width="100%">
+(Add screenshot 2 here with proper name)
 it gives us the question
 
-![<img width="560" height="367" alt="3" src="https://github.com/user-attachments/assets/60269cdb-5cb9-4c15-a64c-55026bd45746" />
-<img width="742" height="385" alt="4" src="https://github.com/user-attachments/assets/49d085a4-f79b-48dc-a42c-840a3e54a26b" />
-](Add screenshot 3 here with proper name)
+ <img src="./3.png" alt="Project Banner" width="100%">
+  <img src="./4.png" alt="Project Banner" width="100%">
+(Add screenshot 3 here with proper name)
 it shows how ai analysed tha answers and give the probability of passing
 
 #### Diagrams
@@ -91,7 +91,7 @@ it shows how ai analysed tha answers and give the probability of passing
 **System Architecture:**
 
 ![Architecture Diagram](docs/architecture.png)
-Flow Summary:<img width="1536" height="1024" alt="ad" src="https://github.com/user-attachments/assets/9ae954f9-1b3a-4983-a729-5519ac80bde0" />
+Flow Summary: <img src="./ad.png" alt="Project Banner" width="100%">
 
 
 Step 1: Input & Question Generation
@@ -126,7 +126,7 @@ Restart button resets the session for a fresh interview.
 
 **Application Workflow:**
 
-![Workflow](docs/<img width="1024" height="1536" alt="aw" src="https://github.com/user-attachments/assets/7ebc7a25-8a55-45b4-9d31-01fbdbd5f89c" />
+![Workflow] <img src="./aw.png" alt="Project Banner" width="100%">
 workflow.png)
 User Launches App
 
@@ -189,7 +189,7 @@ Ensures user can navigate back/forward without losing data.
 
 #### Build Photos
 
-![Team](Add photo of your team here)<img width="157" height="143" alt="nile" src="https://github.com/user-attachments/assets/5620fc77-2900-425a-a4fa-4aa2fc2525cc" />
+![Team](Add photo of your team here) <img src="./nile.png" alt="Project Banner" width="100%">
 
 
 
