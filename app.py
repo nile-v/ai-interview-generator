@@ -5,7 +5,7 @@ import json
 # ----------------------------
 # 🔹 Configure your AI client
 # ----------------------------
-API_KEY = "AIzaSyAX7YFEeb7wLW5I3VsZG3nMLmXY5A71164"  # Replace with your Gemini API key
+API_KEY = "AIzaSyBYsS1MnqN4lIl5Ypc_bBkDMul7RLficJU"  # Replace with your Gemini API key
 client = genai.Client(api_key=API_KEY)
 
 # ----------------------------
